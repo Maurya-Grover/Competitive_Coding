@@ -34,8 +34,8 @@ void subArraySumBrute(vll &a, int size, int sum)
 
 void subArraySum(vll &a, int size, int sum)
 {
-    int i(1), j(1);
-    ll cur_sum(0);
+    int i = 1, j = 1;
+    ll cur_sum = 0;
     while (i < size || j < size)
     {
         if (cur_sum == sum)

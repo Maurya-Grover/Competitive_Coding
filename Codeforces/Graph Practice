@@ -1,0 +1,57 @@
+Graph theory is one of the most important topics in discrete math and programming. 
+According to me, the most crucial step in solving graph theory problems is visualising 
+them properly.
+
+Most people will tell you "Go to XYZ website, sort problems by graph theory and start
+practicing". This has to be done any way for any topic. Let me tell you something more
+interesting. In this answer, I shall try to throw light on how you build intuition about graph problems and how you can know which approach to take. Let's go step wise:
+
+Read the question very carefully for determining what type of graph it is:
+
+This is the first and probably one of the most important steps. The question will tell you
+whether the graph is a tree, or it is a graph with only one cycle, or multiple disjoint cycles,
+or just a random graph. A tree has so many nice properties that you can exploit. There are
+subtle ways of saying that the given graph is a tree. For example: "The graph has N nodes.
+It is not disjoint and has N-1 edges", "The graph doesn't contain any cycles", "In the given 
+directed graph, each node has one and only one parent", etc. Similarly, if there is only 
+one cycle, then you can imagine the graph as having a ring with many trees hanging from the 
+nodes of the ring.
+
+Once the graph has been identified, identify what the question wants from you:
+
+In this step, you try to figure out what is it that the question wants you to do. Does it have 
+something to do with shortest paths? If yes, then are all the weights positive? If not, then 
+clearly it can't be direct Dijkstra. What else can we do? Bellman Ford? Floyd-Warshall? 
+You should be able to eliminate approaches fast.
+
+Graph problems can also include simple traversal, flows, disjoint unions, etc. The best way 
+to figure out what is applicable is method of elimination. The size of input data tells a 
+lot about the algorithm to be used. This is because graph algorithms span the whole range of 
+complexities, from linear to exponential. So, if you know you need a linear or a quasi-linear 
+algorithm for the given size of input, you can simply eliminate many of the algorithms.
+
+If you have identified that the graph is not a tree, a lot of algorithms can further be 
+eliminated like heavy-light decomposition, dynamic programming on trees, centroid 
+decomposition, etc, unless the question allows you to form a tree of biconnected 
+components.
+
+Coming up with an algorithm to solve the problem:
+
+Once you have identified what the question is asking you to do, and what is the basic 
+algorithm that is going to be used, the last step is to come up with a working solution. 
+The best way according to me is to solve the problem with pen and paper. You construct 
+small graphs of the kind that the question puts out, and you try to apply the techniques 
+that you shortlisted from the previous section. This is because graph algorithms generally 
+are quite good at scalability. What this means is that if you observe a particular property 
+for a small graph that you draw on paper, it is highly likely that the property will be 
+true for similar graphs of any size . So, by trying out techniques on paper, you can get to 
+a solution in most of the cases.
+
+Coding graph problems:
+
+Graph problems are generally code intensive. But they follow a very standard pattern. This 
+is the point where practice comes in. You need to code quite a few graph problems before you 
+reach a stage of mastery. The biggest hurdle is coding what you have visualised since graph 
+problems tend to be more abstract in nature than something like data structures or greedy algorithms. 
+There is only one way to work around this hurdle: practice. The more you code, the better you become 
+with putting your visualisation on to your editor.
